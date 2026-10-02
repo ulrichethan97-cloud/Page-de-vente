@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>En 7 jours, reprends le contrôle de ton budget et épargne enfin</title>
+<meta name="description" content="Salariée ? Découvre où part ton salaire et commence à épargner en 7 jours, sans calculs compliqués. Un guide et un carnet de bord à lire sur ton téléphone.">
+<meta property="og:title" content="En 7 jours, reprends le contrôle de ton budget et épargne enfin">
+<meta property="og:description" content="Un guide et un carnet de bord simples pour savoir où part ton salaire et épargner chaque mois.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%B0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0F3A2F;--text:#17231E;--muted:#506059;--paper:#FBFCF9;--mint:#E3EFE7;--gold:#E3A826;--gold-d:#B58019;--line:#CFDCD4;--white:#fff;--rose:#F9E9E4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.6;color:var(--text);background:var(--paper);padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;line-height:1.14;color:var(--ink);margin:0 0 .55em}
+h1{font-size:clamp(2.05rem,8vw,3.5rem);font-weight:800;letter-spacing:-.015em}
+h2{font-size:clamp(1.6rem,6vw,2.3rem);font-weight:800;text-align:center}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.narrow{max-width:680px}
+section{padding:60px 0}
+.tag{display:table;margin:0 auto 14px;background:var(--mint);color:var(--ink);font-weight:700;font-size:.9rem;padding:5px 14px;border-radius:99px}
+.lead{text-align:center;color:var(--muted);max-width:34em;margin:0 auto 34px}
+.btn{display:block;width:100%;max-width:440px;text-align:center;background:var(--gold);color:#251A02;font-weight:700;font-size:1.1rem;text-decoration:none;padding:17px 22px;border-radius:14px;border:2px solid var(--gold-d);box-shadow:0 4px 0 var(--gold-d);transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.center{display:flex;justify-content:center;margin-top:30px}
+.note{font-size:.9rem;color:var(--muted)}
+
+/* hero */
+.hero{padding:44px 0 56px;background:linear-gradient(180deg,var(--mint),var(--paper))}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero .sub{font-size:1.12rem;color:#34453E;max-width:34em}
+.checks{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.95rem;font-weight:500}
+.checks li:before{content:"✓ ";color:var(--gold-d);font-weight:700}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stats span{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-weight:700;color:var(--ink);font-size:.95rem}
+
+/* mockups */
+.mock{position:relative;height:340px;max-width:430px;margin:0 auto;width:100%}
+.cover{position:absolute;left:2%;top:10px;width:46%;aspect-ratio:3/4.2;background:var(--ink);border-radius:8px 14px 14px 8px;padding:18px 14px;color:#fff;transform:rotate(-5deg);box-shadow:-6px 10px 0 rgba(15,58,47,.18);border-left:8px solid #082a21}
+.cover b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.02rem;line-height:1.18;margin-bottom:10px}
+.cover i{display:block;width:34px;height:4px;background:var(--gold);margin-bottom:10px}
+.cover small{font-size:.7rem;line-height:1.3;color:#C9DDD2;display:block}
+.sheet{position:absolute;right:0;top:46px;width:62%;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 12px;transform:rotate(3deg);box-shadow:6px 10px 0 rgba(224,168,38,.28);background-image:repeating-linear-gradient(180deg,transparent 0,transparent 21px,#EEF3F0 21px,#EEF3F0 22px)}
+.sheet h4{margin:0 0 2px;font-family:Fraunces,Georgia,serif;font-size:1rem;color:var(--ink)}
+.sheet p{font-size:.68rem;color:var(--muted);margin:0 0 8px;line-height:1.3}
+.sheet table{width:100%;border-collapse:collapse;font-size:.66rem;background:#fff}
+.sheet th,.sheet td{border:1px solid var(--line);padding:4px 3px;text-align:right}
+.sheet th{background:var(--mint);color:var(--ink);font-size:.62rem}
+.sheet td:last-child{background:#FDF3D8;font-weight:700}
+
+/* cards */
+.grid{display:grid;gap:14px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card .ic{font-size:1.6rem;display:block;margin-bottom:6px}
+.alt{background:var(--mint)}
+.ba{display:grid;gap:14px}
+.ba .card ul{list-style:none;padding:0;margin:0}
+.ba li{padding:7px 0 7px 28px;position:relative}
+.before{background:var(--rose);border-color:#F0D3CB}
+.before li:before{content:"✕";position:absolute;left:4px;color:#B4412A;font-weight:700}
+.after{border-color:#BFD8C9}
+.after li:before{content:"✓";position:absolute;left:4px;color:#1F7A55;font-weight:700}
+.day{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start}
+.day .n{width:54px;height:54px;border-radius:14px;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1;font-size:1.35rem}
+.day .n small{display:block;font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;margin-bottom:2px}
+.day h3{margin:0 0 4px}.day p{margin:0;color:var(--muted);font-size:.98rem}
+.steps{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.steps div{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;font-weight:700;color:var(--ink)}
+.steps span{display:block;font-weight:400;font-size:.85rem;color:var(--muted);margin-top:2px}
+.steps div:last-child{grid-column:1/-1}
+blockquote{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+blockquote:before{content:"★★★★★";display:block;color:var(--gold);letter-spacing:2px;margin-bottom:6px}
+blockquote p{margin:0 0 8px;font-size:1.05rem}
+blockquote cite{font-style:normal;font-weight:700;color:var(--ink);font-size:.95rem}
+
+/* offre */
+.offer{max-width:560px;margin:0 auto;background:var(--white);border:2px solid var(--ink);border-radius:20px;padding:26px 24px;text-align:center}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);text-align:left}
+.row s{color:var(--muted);white-space:nowrap}
+.row.t{font-weight:700;border-bottom:0}
+.price{font-family:Fraunces,Georgia,serif;font-size:3.4rem;font-weight:800;color:var(--ink);line-height:1;margin:14px 0 8px}
+.badge{display:inline-block;background:var(--ink);color:#fff;font-size:.9rem;font-weight:700;padding:6px 12px;border-radius:8px;margin-bottom:16px}
+.offer .btn{margin:0 auto}
+.guar{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;max-width:620px;margin:0 auto;background:var(--white);border:1px dashed var(--ink);border-radius:16px;padding:22px}
+.guar .ic{font-size:2.4rem}
+.guar p{margin:0}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;padding:16px 0;color:var(--ink)}
+details p{margin:0 0 16px;color:#34453E}
+.final{background:var(--ink);text-align:center}
+.final h2{color:#fff}
+.final p{color:#CFE2D7}
+footer{padding:26px 0 96px;font-size:.88rem;color:var(--muted);text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(251,252,249,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:none;z-index:9}
+.sticky .btn{max-width:none;padding:13px 16px;font-size:1rem}
+@media(max-width:759px){.sticky{display:block}}
+@media(min-width:760px){
+ body{font-size:19px}section{padding:84px 0}
+ .hero-grid{grid-template-columns:1.15fr .85fr}
+ .grid.g2{grid-template-columns:repeat(2,1fr)}
+ .grid.g3{grid-template-columns:repeat(3,1fr)}
+ .ba{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:repeat(5,1fr)}.steps div:last-child{grid-column:auto}
+ .mock{height:400px}
+}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}html{scroll-behavior:auto}}
+
+/* brillance du bouton */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.85) 50%,transparent 100%);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes shine{0%{left:-80%}55%,100%{left:135%}}
+/* apparition progressive (activée seulement si le JavaScript fonctionne) */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.btn::after{animation:none;display:none}.js .reveal{opacity:1;transform:none;transition:none}}
+
+/* ===== v4 : visuels vivants, mobile d'abord ===== */
+.hero{padding:30px 0 46px}
+.hero-grid{gap:22px;grid-template-areas:"text" "mock" "cta"}
+.h-text{grid-area:text}.mock{grid-area:mock}.h-cta{grid-area:cta}
+.h-cta .checks{margin-top:16px}
+.mock{height:330px}
+.cover{--r:-5deg;animation:fl 7s ease-in-out infinite}
+.sheet{--r:3deg;animation:fl 8s ease-in-out -2s infinite}
+.sheet td:last-child{animation:glow 3.6s ease-in-out infinite}
+.chip{--r:0deg;position:absolute;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 12px;font-weight:700;font-size:.8rem;color:var(--ink);box-shadow:0 6px 16px rgba(15,58,47,.13);animation:fl 7s ease-in-out infinite;z-index:2}
+.c1{left:0;bottom:14px}.c2{right:6px;top:0;animation-delay:-3s}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-9px) rotate(var(--r))}}
+@keyframes glow{0%,100%{background:#FDF3D8}50%{background:#F8DD93}}
+@media(min-width:760px){
+ .hero{padding:44px 0 60px}
+ .hero-grid{grid-template-columns:1.1fr .9fr;grid-template-areas:"text mock" "cta mock";column-gap:36px;row-gap:0;align-items:center}
+ .h-text{align-self:end}.h-cta{align-self:start;margin-top:26px}
+ .mock{height:400px}
+}
+/* cartes "tu te reconnais" : icône en vignette */
+.card .ic{width:54px;height:54px;border-radius:16px;background:var(--mint);display:grid;place-items:center;font-size:1.8rem;margin:0}
+.g2 .card{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+/* frise du programme */
+.tl{position:relative;display:grid;gap:14px}
+.tl-line{position:absolute;left:21px;top:8px;bottom:8px;width:3px;background:#C3D5CA;border-radius:3px}
+.tl-line i{display:block;width:100%;height:0;background:var(--gold);border-radius:3px;transition:height .25s linear}
+.tl-item{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;position:relative}
+.dot{position:relative;z-index:1;width:44px;height:44px;border-radius:50%;background:var(--white);border:3px solid #C3D5CA;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-weight:800;color:var(--ink);transition:background .4s,color .4s,border-color .4s}
+.dot.on{background:var(--ink);border-color:var(--gold);color:#fff}
+.tl-item .card{padding:16px}
+.tl-item h3{margin:0 0 4px;font-size:1.08rem}
+.tl-item p{margin:0;color:var(--muted);font-size:.97rem}
+.e{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--mint);border-radius:10px;margin-right:8px;font-size:1.1rem;vertical-align:middle}
+.goal{height:10px;background:var(--mint);border-radius:99px;overflow:hidden;margin:12px 0 6px}
+.goal i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#F2C762);border-radius:99px;transform-origin:left;transition:transform 1.5s cubic-bezier(.2,.7,.2,1) .3s}
+.js .goal i{transform:scaleX(0)}.js .goal.in i{transform:none}
+/* méthode des 3 enveloppes */
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 20px}
+.chips button{font:inherit;font-weight:700;min-height:46px;padding:10px 18px;border-radius:99px;border:2px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.chips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chips button:focus-visible{outline:3px solid var(--gold-d);outline-offset:2px}
+.bar{display:flex;height:58px;border-radius:14px;overflow:hidden;margin-bottom:14px;font-weight:700;font-size:.82rem}
+.bar span{display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1;padding:0 4px;transform-origin:left;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.b1{flex:60;background:#2C5B4D;color:#fff;transition-delay:.1s}.b2{flex:20;background:#86AE9C;color:#0B241D;transition-delay:.45s}.b3{flex:20;background:var(--gold);color:#251A02;transition-delay:.75s}
+.js .bar span{transform:scaleX(0)}.js .bar.in span{transform:none}
+.env-grid{display:grid;gap:10px}
+.card.env{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px}
+.env small{display:block;color:var(--muted);font-size:.84rem;line-height:1.3}
+.env .val{text-align:right;font-size:.9rem;white-space:nowrap}
+.env .amt{font-family:Fraunces,Georgia,serif;font-size:1.4rem;color:var(--ink)}
+.env.gold{background:#FDF3D8;border-color:var(--gold-d)}
+/* témoignages défilants */
+.rating{text-align:center;color:var(--muted);font-size:.95rem;margin:0 0 26px}
+.rating span{color:var(--gold);letter-spacing:2px;margin-right:6px}
+.marquee{overflow-x:auto;padding:6px 0 12px;scrollbar-width:none}
+.marquee::-webkit-scrollbar{display:none}
+.track{display:flex;width:max-content;padding-left:22px}
+.marquee blockquote{flex:none;width:min(80vw,330px);margin:0 14px 0 0;display:flex;flex-direction:column;justify-content:space-between;min-height:170px}
+.who{display:flex;align-items:center;gap:10px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+.js .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.js .track{padding-left:0;animation:mq 54s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marquee:hover .track,.marquee:active .track{animation-play-state:paused}
+@media(min-width:760px){.card.env{padding:18px 22px}.bar{height:64px;font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){.cover,.sheet,.chip,.sheet td:last-child,.js .track{animation:none}.tl-line i,.dot,.goal i,.bar span{transition:none}.js .goal i,.js .bar span{transform:none}}
+</style>
+<script>if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js')}</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="h-text">
+      <h1>Salariée ? En 7 jours, découvre où part ton salaire et commence enfin à épargner</h1>
+      <p class="sub">Un guide et un carnet de bord simples, à lire sur ton téléphone, sans calculs compliqués. Si tu ne vois aucun résultat après 7 jours, je t'accompagne personnellement jusqu'à ce que ça marche.</p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="cover"><i></i><b>En 7 jours, reprends le contrôle de ton budget et épargne enfin</b><small>Le guide simple pour savoir où part ton argent et épargner chaque mois, sans calculs compliqués.</small></div>
+      <div class="sheet">
+        <h4>Mon carnet de bord</h4><p>Jour 3 : mes 3 enveloppes. Cherche la ligne la plus proche de ton salaire.</p>
+        <table><tr><th>Salaire</th><th>Charges</th><th>Vie</th><th>Épargne</th></tr>
+        <tr><td>100 000</td><td>60 000</td><td>20 000</td><td>20 000</td></tr>
+        <tr><td>150 000</td><td>90 000</td><td>30 000</td><td>30 000</td></tr>
+        <tr><td>200 000</td><td>120 000</td><td>40 000</td><td>40 000</td></tr></table>
+      </div>
+      <span class="chip c1">✓ Épargne en premier</span><span class="chip c2">📅 7 jours</span>
+    </div>
+    <div class="h-cta">
+      <a class="btn" href="https://axlwlszd.mychariow.co/prd_3o0rd3rl/checkout">Je veux commencer ma transformation</a>
+      <ul class="checks"><li>Lisible sur ton téléphone</li><li>Mobile Money accepté</li><li>Débutante acceptée</li></ul>
+      <div class="stats"><span>7 jours</span><span>2 fichiers</span><span>0 calcul compliqué</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="tag">Tu te reconnais ?</span>
+    <h2>Tu travailles dur, mais il ne reste presque rien</h2>
+    <p class="lead">Tu reçois ton salaire, tu paies tout ce qu'il faut, et à la fin du mois, tu ne sais plus où il est passé.</p>
+    <div class="grid g2">
+      <div class="card"><span class="ic">💸</span>Ton salaire tombe, et à la fin du mois il ne reste presque rien.</div>
+      <div class="card"><span class="ic">🔍</span>Tu ne sais pas exactement où part ton argent : les petites dépenses, les imprévus, tout s'additionne sans que tu le voies.</div>
+      <div class="card"><span class="ic">🤝</span>Tu aides ta famille de bon cœur, mais sans jamais fixer de limite à l'avance.</div>
+      <div class="card"><span class="ic">🛟</span>Tu voudrais une réserve pour les imprévus, sans avoir à emprunter.</div>
+    </div>
+    <p style="margin-top:28px;text-align:center" class="narrow wrap">Tu as peut-être même tapé sur Google « comment savoir où part mon argent ». Tu as lu des conseils, mais personne ne t'a donné une méthode simple.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <span class="tag">Si rien ne change</span>
+    <h2>Dans un an, tu seras au même point</h2>
+    <p style="text-align:center">Même salaire. Même fin de mois. Zéro épargne.</p>
+    <div class="card" style="margin:22px 0;text-align:center;border-color:var(--gold-d)">
+      <p style="margin:0;font-family:Fraunces,Georgia,serif;font-size:1.3rem;color:var(--ink)">Imagine 20 000 FCFA qui disparaissent chaque mois sans que tu saches où. En 12 mois, ça fait 240 000 FCFA envolés.</p>
+      <p class="note" style="margin:8px 0 0">C'est un exemple pour te faire visualiser, pas ton chiffre exact.</p>
+    </div>
+    <p style="text-align:center">Au premier imprévu, une maladie, la scolarité, une panne, tu devras emprunter ou demander de l'aide. Tu auras travaillé des années sans te construire la moindre sécurité, ni pour toi ni pour tes enfants.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="tag">Ce que ça change</span>
+    <h2>Avant, après : ce qui change concrètement</h2>
+    <p class="lead">Tu ne cherches pas à gagner plus d'abord. Tu cherches à savoir où va ton salaire et à en mettre une partie de côté.</p>
+    <div class="ba">
+      <div class="card before"><h3>😟 Avant</h3><ul>
+        <li>Tu ne sais pas où part ton salaire</li>
+        <li>L'aide familiale et les « occasions » te surprennent en fin de mois</li>
+        <li>L'épargne, c'est ce qui reste, donc rien</li>
+        <li>Un imprévu te met dans l'angoisse</li></ul></div>
+      <div class="card after"><h3>😌 Après</h3><ul>
+        <li>Tu vois ton argent grâce au carnet des 3 jours</li>
+        <li>Tu connais tes 3 fuites personnelles</li>
+        <li>Ton épargne part en premier, le jour de la paie</li>
+        <li>Ta réserve d'urgence est lancée, premier objectif 10 000 FCFA</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <span class="tag">Le programme</span>
+    <h2>Ce que tu vas faire, jour après jour</h2>
+    <p class="lead">Un chapitre par jour. Le carnet de bord suit exactement le même ordre.</p>
+    <div class="tl">
+      <div class="tl-line"><i></i></div>
+      <div class="tl-item"><div class="dot">1</div><div class="card"><h3><span class="e">🔍</span>Jour 1 : Découvre où part ton argent</h3><p>Tu notes tes dépenses pendant 3 jours avec le carnet.</p></div></div>
+      <div class="tl-item"><div class="dot">2</div><div class="card"><h3><span class="e">🕳️</span>Jour 2 : Trouve tes 3 fuites</h3><p>Petites dépenses, aide familiale sans limite, « occasions ».</p></div></div>
+      <div class="tl-item"><div class="dot">3</div><div class="card"><h3><span class="e">✉️</span>Jour 3 : Construis tes 3 enveloppes</h3><p>Un tableau déjà calculé pour les salaires de 50 000 à 500 000 FCFA.</p></div></div>
+      <div class="tl-item"><div class="dot">4</div><div class="card"><h3><span class="e">💳</span>Jour 4 : Sache quoi faire le jour de la paie</h3><p>Ton épargne part en premier, avant toute autre dépense.</p></div></div>
+      <div class="tl-item"><div class="dot">5</div><div class="card"><h3><span class="e">🛟</span>Jour 5 : Lance ta réserve d'urgence</h3><p>Premier objectif : 10 000 FCFA, sans te priver de tout.</p><div class="goal"><i></i></div><span class="note">Ton premier objectif : 10 000 FCFA</span></div></div>
+      <div class="tl-item"><div class="dot">6</div><div class="card"><h3><span class="e">🧭</span>Jour 6 : Prépare tes réflexes</h3><p>Imprévus, demandes d'aide familiale, tentations d'achat.</p></div></div>
+      <div class="tl-item"><div class="dot">7</div><div class="card"><h3><span class="e">🔁</span>Jour 7 : Installe ton rituel mensuel</h3><p>15 minutes par mois pour tenir sur la durée.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <span class="tag">La méthode</span>
+    <h2>Ton salaire, réparti en 3 enveloppes</h2>
+    <p class="lead">Choisis un salaire et regarde comment il se répartit. Les montants viennent du tableau de ton carnet de bord.</p>
+    <div class="chips" role="group" aria-label="Choisis ton salaire mensuel">
+      <button type="button" data-s="100000" aria-pressed="false">100 000</button>
+      <button type="button" data-s="150000" aria-pressed="true">150 000</button>
+      <button type="button" data-s="200000" aria-pressed="false">200 000</button>
+      <button type="button" data-s="300000" aria-pressed="false">300 000</button>
+    </div>
+    <div class="bar" aria-hidden="true"><span class="b1">Charges 60 %</span><span class="b2">Vie 20 %</span><span class="b3">Épargne 20 %</span></div>
+    <div class="env-grid">
+      <div class="card env"><span class="ic">🏠</span><div><b>Charges obligatoires</b><small>60 % de ton salaire</small></div><div class="val"><b class="amt" data-i="0">90 000</b> FCFA</div></div>
+      <div class="card env"><span class="ic">🛍️</span><div><b>Vie quotidienne</b><small>20 % de ton salaire</small></div><div class="val"><b class="amt" data-i="1">30 000</b> FCFA</div></div>
+      <div class="card env gold"><span class="ic">💰</span><div><b>Épargne</b><small>20 %, à mettre de côté en premier</small></div><div class="val"><b class="amt" data-i="2">30 000</b> FCFA</div></div>
+    </div>
+    <p class="note" style="text-align:center;margin-top:14px">Exemple tiré du tableau du carnet de bord (Jour 3), pour des salaires de 50 000 à 500 000 FCFA.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="tag">Tu peux commencer même si…</span>
+    <h2>Où que tu en sois, il y a un point de départ</h2>
+    <div class="grid g3" style="margin-top:30px">
+      <div class="card"><h3>Tu gagnes peu</h3><p style="margin:0">La méthode fonctionne en pourcentages, et le tableau du carnet part de 50 000 FCFA de salaire.</p></div>
+      <div class="card"><h3>Tu n'aimes pas les chiffres</h3><p style="margin:0">Aucun calcul compliqué : tes 3 montants sont déjà calculés dans le tableau.</p></div>
+      <div class="card"><h3>Tu n'as jamais fait de budget</h3><p style="margin:0">Tu avances jour après jour, avec un exercice court à faire chaque jour.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="tag">Elles l'ont lu</span>
+    <h2>Ce qu'elles en disent</h2>
+    <p class="rating"><span>★★★★★</span> Avis publiés sur la fiche produit Chariow</p>
+  </div>
+  <div class="marquee" aria-label="Avis des lectrices"><div class="track">
+    <blockquote><p>J'ai vécu une véritable transformation grâce à ce guide.</p><div class="who"><span class="av">S</span><cite>Samira B.</cite></div></blockquote>
+    <blockquote><p>Je recommande ce guide à toutes les femmes qui veulent enfin épargner.</p><div class="who"><span class="av">T</span><cite>Tyrah B.</cite></div></blockquote>
+    <blockquote><p>Ce guide est vraiment très puissant et en seulement 7 jours en plus.</p><div class="who"><span class="av">E</span><cite>Ericaine S.</cite></div></blockquote>
+  </div></div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="tag">L'offre</span>
+    <h2>Ce que tu reçois, et son prix</h2>
+    <div class="offer" style="margin-top:30px">
+      <div class="row"><span>📖 Ebook Budget 7 Jours</span><s>10 000 FCFA</s></div>
+      <div class="row"><span>📝 Carnet de Bord Template</span><s>5 000 FCFA</s></div>
+      <div class="row t"><span>Valeur totale</span><span>15 000 FCFA</span></div>
+      <div class="price">5 000 FCFA</div>
+      <span class="badge">Prix de lancement réservé aux 100 premières personnes</span>
+      <a class="btn" href="https://axlwlszd.mychariow.co/prd_3o0rd3rl/checkout">Je veux commencer ma transformation</a>
+      <p class="note" style="margin:12px 0 0">Paiement par Mobile Money ou par carte.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="guar"><span class="ic">🛡️</span><p><b>Tu ne risques rien.</b> Suis les 7 jours. Si tu ne vois aucun résultat, tu m'écris et je t'accompagne personnellement jusqu'à ce que ça marche.</p></div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2>Tout ce que tu veux savoir</h2>
+    <div style="margin-top:26px">
+      <details><summary>Je gagne peu, est-ce que ça marche quand même ?</summary><p>Oui. La méthode fonctionne en pourcentages, et le tableau du carnet part de 50 000 FCFA de salaire. Épargner un petit montant chaque mois, avec régularité, vaut mieux qu'un gros effort isolé.</p></details>
+      <details><summary>Je ne suis pas à l'aise avec les chiffres.</summary><p>Il n'y a aucun calcul compliqué. Cherche la ligne la plus proche de ton salaire dans le tableau : tes 3 montants sont déjà calculés.</p></details>
+      <details><summary>Comment je reçois le produit ?</summary><p>Après ton paiement, tu accèdes à tes 2 fichiers : l'ebook et le carnet de bord.</p></details>
+      <details><summary>Puis-je le lire sur mon téléphone ?</summary><p>Oui. Le guide se lit sur ton téléphone, et le carnet se remplit au stylo ou directement à l'écran.</p></details>
+      <details><summary>Comment je paie ?</summary><p>Par Mobile Money ou par carte.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap narrow">
+    <h2>Dans 7 jours, tu sauras où va ton salaire</h2>
+    <p style="text-align:center">Le prix de lancement est réservé aux 100 premières personnes.</p>
+    <div class="center"><a class="btn" href="https://axlwlszd.mychariow.co/prd_3o0rd3rl/checkout">Je veux commencer ma transformation</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Lucille Finance. Paiement sécurisé via Chariow.</div></footer>
+
+<div class="sticky"><a class="btn" href="https://axlwlszd.mychariow.co/prd_3o0rd3rl/checkout">Je veux commencer ma transformation</a></div>
+
+<script>
+(function(){
+  if(!document.documentElement.classList.contains('js'))return;
+  var sel='.hero-grid>div,.tag,section h2,.lead,.card,.steps div,.marquee,.bar,.goal,.offer,.guar,details,.final p,.center,.stats span,.chip';
+  var els=document.querySelectorAll(sel);
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){
+    var i=Array.prototype.indexOf.call(el.parentNode.children,el);
+    el.style.transitionDelay=(i%4)*90+'ms';
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+})();
+</script>
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var js=document.documentElement.classList.contains('js');
+  /* témoignages : boucle continue */
+  var track=document.querySelector('.track');
+  if(js&&track){
+    var base=[].slice.call(track.children).map(function(n){return n.outerHTML}).join('');
+    var half=base+base; track.innerHTML=half+half;
+    [].slice.call(track.children).forEach(function(n,i){if(i>=3)n.setAttribute('aria-hidden','true')});
+  }
+  /* enveloppes : choix du salaire */
+  var T={100000:[60000,20000,20000],150000:[90000,30000,30000],200000:[120000,40000,40000],300000:[180000,60000,60000]};
+  var amts=document.querySelectorAll('.amt');
+  function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00A0')}
+  amts.forEach(function(a){a.dataset.v=a.textContent.replace(/\D/g,'')});
+  function tween(el,to){
+    var from=+el.dataset.v,t0=null;el.dataset.v=to;
+    if(rm){el.textContent=fmt(to);return}
+    function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/600),e=1-Math.pow(1-k,3);el.textContent=fmt(from+(to-from)*e);if(k<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step);
+  }
+  var btns=document.querySelectorAll('.chips button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    var v=T[b.dataset.s];amts.forEach(function(a){tween(a,v[+a.dataset.i])});
+  })});
+  /* frise du programme */
+  var tl=document.querySelector('.tl');
+  if(tl){
+    var fill=tl.querySelector('.tl-line i'),items=tl.querySelectorAll('.tl-item'),tick=false;
+    function upd(){
+      tick=false;var r=tl.getBoundingClientRect();
+      var p=Math.max(0,Math.min(1,(innerHeight*.62-r.top)/r.height));
+      fill.style.height=(p*100)+'%';
+      items.forEach(function(it){it.querySelector('.dot').classList.toggle('on',it.offsetTop+22<=p*r.height)});
+    }
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+    addEventListener('resize',upd);upd();
+  }
+})();
+</script>
+</body>
+</html>
